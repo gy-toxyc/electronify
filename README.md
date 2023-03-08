@@ -19,16 +19,11 @@ You can find all the documentation behind this project in the `docs` folder.
 
 ## ***Changelog***
 
-<ul>
-    <li>
-        <h5 style="font-size: 17px;">1.0.0<span style="color: red; font-size: 12px; font-style: italic; margin-left: 7px;">new</span></h5>
-    </li>
-    <li style="list-style: none;">
-        <h5 style="font-size: 14px; font-weight: 300; font-style: italic;"> · Create Electron projects.</h5>
-        <h5 style="font-size: 14px; font-weight: 300; font-style: italic;"> · State the path where the project will be saved.</h5>
-        <h5 style="font-size: 14px; font-weight: 300; font-style: italic;"> · Set add-ons to your project (TypeScript, BabelJS and React).</h5>
-    </li>
-</ul>
+
+* Version **1.0.0**
+    * *Create Electron projects.*
+    * *State the path where the project will be saved.*
+    * *Set add-ons to your project (TypeScript, BabelJS and React).*
 
 <br>
 
