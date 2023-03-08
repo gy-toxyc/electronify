@@ -1,0 +1,550 @@
+:root {
+    --bg-color: #0d0d0d;
+    --nav-bg-color: #161616;
+    --nav-shadow: #0000003f;
+
+    --main-color: #0e2fe9;
+    --light-color: #0e99e9;
+
+    --success: #19df07;
+    --error: #db0000;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--bg-color);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    height: 100vh;
+    width: 100vw;
+
+    overflow: hidden;
+}
+
+textarea {
+    resize: none;
+}
+
+input[type="text"], textarea {
+    color: #fff;
+    font-family: 'Lexend';
+    padding-left: 5px;
+}
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    margin: 0px;
+
+    height: 20px;
+    width: 20px;
+    
+    background-color: #00000033;
+    border: 2px solid #ffffff27;
+    border-radius: 6px;
+
+    transition: .5s;
+}
+
+input[type="checkbox"]:hover {
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    outline: none;
+    transition: .5s;
+
+    background-color: var(--main-color);
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.vertical-navbar-box {
+    background-color: var(--nav-bg-color);
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    height: 100%;
+    width: 20%;
+
+    filter: drop-shadow(10px 0px 10px var(--nav-shadow));
+
+    z-index: 5;
+}
+
+.app-logo {
+    height: 100px;
+    width: 100px;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+
+    height: 100%;
+    width: 80%;
+
+    margin-top: 30px;
+
+    gap: 30px;
+
+    list-style: none;
+}
+
+.nav-element h3 {
+    font-family: 'Lexend';
+    background: linear-gradient(7deg, var(--main-color), var(--light-color));
+    animation: rainbow 2s ease-in-out infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: rgba(0,0,0,1);
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    transition: color .2s ease-in-out;
+    transition: .5s;
+    font-weight: bold;
+
+    color: #fff;
+}
+
+.nav-element h3:hover {
+    transition: .5s;
+    cursor: pointer;
+    transform: translateX(10px);
+    color: rgba(0,0,0,0);
+}
+
+.toxyc-copyright {
+    font-weight: 100;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 12px;
+	color: #ffffff5d;
+
+    margin-bottom: 10px;
+
+    pointer-events: none;
+}
+
+.setup-page, .electronify-page, .aboutus-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-items: center;
+
+    height: 100%;
+    width: 80%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.electronify-page {
+    display: none;
+}
+
+.aboutus-page {
+    display: none;
+}
+
+.main-header {
+    position: fixed;
+
+    width: 100%;
+    height: 5%;
+
+    cursor: default;
+
+    background-color: var(--bg-color);
+    filter: drop-shadow(0px 10px 10px var(--bg-color));
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    z-index: 1;
+}
+
+.main-header h1 {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 25px;
+	color: #fff;
+}
+
+.main-header-highlight {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: inherit;
+    background: #ccc;
+	background: linear-gradient(7deg, var(--main-color), var(--light-color));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.create-project-box {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+
+    margin-top: 100px;
+
+    gap: 20px;
+
+    width: 100%;
+}
+
+.column-field {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.row-field {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    gap: 10px;
+}
+
+.i-row-field {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    gap: 10px;
+}
+
+.name-in, .desc-in, .license-in, .version-in, .author-in, .git-in, .path-in, .add-ons, .test-in {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 14px;
+	color: #fff;
+
+    cursor: default;
+
+    gap: 10px;
+}
+
+.name-in input, .author-in input, .git-in input, .path-in input, .test-in input {
+    height: 25px;
+    width: 300px;
+    background-color: #00000033;
+    border: 2px solid #ffffff27;
+    border-radius: 8px;
+
+    transition: .5s;
+}
+
+.name-in input:focus, .author-in input:focus, .git-in input:focus, .path-in input:focus, .test-in input:focus {
+    outline: none;
+    transition: .5s;
+
+    background-color: #00000033;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+}
+
+.desc-in textarea {
+    height: 100px;
+    width: 300px;
+    background-color: #00000033;
+    border: 2px solid #ffffff27;
+    border-radius: 8px;
+
+    overflow-wrap: break-word;
+
+    text-align: start;
+    vertical-align: top;
+
+    color: #fff;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-right: 5px;
+
+    transition: .5s;
+}
+
+.desc-in textarea:focus {
+    outline: none;
+    transition: .5s;
+
+    background-color: #00000033;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+}
+
+.license-in input, .version-in input {
+    height: 25px;
+    width: 200px;
+    background-color: #00000033;
+    border: 2px solid #ffffff27;
+    border-radius: 8px;
+
+    color: #fff;
+    padding-left: 5px;
+
+    transition: .5s;
+}
+
+.license-in input:focus, .version-in input:focus {
+    outline: none;
+    transition: .5s;
+
+    background-color: #00000033;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+}
+
+.submit-button {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    height: 50px;
+    width: 140px;
+
+    margin-top: 30px;
+    margin-bottom: 50px;
+
+    background: linear-gradient(7deg, var(--main-color), var(--light-color));
+    border-radius: 8px;
+    border: 0px solid transparent;
+
+    transition: .5s;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    transition: .5s;
+    transform: translateY(-5px);
+    filter: brightness(115%) drop-shadow(0px 0px 10px #0e2fe959);
+}
+
+.submit-button:active {
+    transition: .5s;
+    scale: 95%;
+    filter: brightness(125%) drop-shadow(0px 0px 10px #0e2fe959);
+}
+
+.submit-button h3 {
+    font-family: 'Lexend';
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.msg-box {
+    position: absolute;
+
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+
+    text-overflow: ellipsis;
+
+    justify-content: flex-start;
+    align-items: flex-end;
+    align-content: flex-end;
+
+    align-self: flex-end;
+    top: calc(100vh - 100px);
+
+    height: 90px;
+    width: 280px;
+
+    margin-right: 10px;
+
+    z-index: 7;
+}
+
+.msg-txt {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 12px;
+	color: #fff;
+
+    text-align: right;
+}
+
+
+
+/*! ////////////////////////////////////// !*/
+/*! ////////////////////////////////////// !*/
+
+.electronify-header {
+    width: 100%;
+    height: 10%;
+
+    cursor: default;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+
+    margin-top: 15px;
+
+    z-index: 1;
+}
+
+.electronify-header h1 {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 30px;
+	color: #fff;
+}
+
+.electronify-description {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 14px;
+	color: #fff;
+
+    margin-top: 55px;
+
+    text-align: center;
+}
+
+.electronify-header-highlight {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: inherit;
+    background: #ccc;
+	background: linear-gradient(7deg, var(--main-color), var(--light-color));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.create-project-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 700px;
+
+    margin-left: 70px;
+    margin-top: 100px;
+
+    gap: 25px;
+}
+
+.create-project-info h1 {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 30px;
+	color: #fff;
+}
+
+.create-project-info h1 {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 30px;
+	color: #fff;
+}
+
+
+
+/*! ////////////////////////////////////// !*/
+/*! ////////////////////////////////////// !*/
+
+@keyframes pageAppearing {
+    from {
+        opacity: 0%;
+
+    }
+    to {
+        transform: translateX(20px);
+        opacity: 100%;
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 100%;
+
+    }
+    to {
+        transform: translateX(20px);
+        opacity: 0%;
+    }
+}

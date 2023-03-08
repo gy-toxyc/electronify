@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronify</title>
+    <link rel="icon" type="image/jpg" href="./electron_base/img/electronify.png">
+    <link rel="stylesheet" href="./dom/css/index.css">
+</head>
+<body>
+    <div class="vertical-navbar-box">
+        <img draggable="false" src="./dom/css/img/electronify-logo.png" class="app-logo">
+        <ul class="navbar">
+            <li class="nav-element project-el">
+                <h3>Create a Project</h3>
+            </li>
+            <li class="nav-element electronify-el">
+                <h3>What is Electronify?</h3>
+            </li>
+            <li class="nav-element aboutus-el">
+                <h3>About us!</h3>
+            </li>
+        </ul>
+        <h5 class="toxyc-copyright">&#169; ToxYc 2023</h5>
+    </div>
+
+    <div class="setup-page">
+        <div class="main-header">
+            <h1>Set up your <span class="main-header-highlight">Electron Project</span></h1>
+        </div>
+
+        <form id="electron-setup" action="" method="post">
+            
+            <div class="create-project-box">
+                <div class="column-field name-in">
+                    <h4>Project name</h4>
+                    <input id="name-in" type="text" required="true">
+                </div>
+                <div class="column-field desc-in">
+                    <h4>Project description</h4>
+                    <textarea id="desc-in"  maxlength="1024"></textarea>
+                </div>
+                <div class="row-field">
+                    <div class="column-field license-in">
+                        <h4>License</h4>
+                        <input id="license-in" type="text" placeholder="ISC">
+                    </div>
+                    <div class="column-field version-in">
+                        <h4>Version</h4>
+                        <input id="version-in" type="text" placeholder="1.0.0">
+                    </div>
+                </div>
+                <div class="column-field author-in">
+                    <h4>Author</h4>
+                    <input id="author-in" type="text">
+                </div>
+                <div class="column-field test-in">
+                    <h4>Test command</h4>
+                    <input id="test-in" type="text" placeholder="test">
+                </div>
+                <div class="column-field git-in">
+                    <h4>GIT Repository</h4>
+                    <input id="git-in" type="text" placeholder="URL of your repository">
+                </div>
+                <div class="column-field path-in">
+                    <h4>Path for the project</h4>
+                    <input id="path-in" type="text" required="true">
+                </div>
+                <div class="column-field add-ons">
+                    <h4>Add-ons to your project</h4>
+                    <div class="i-row-field ts-check">
+                        <h4>TypeScript</h4>
+                        <input id="ts-check" type="checkbox">
+                    </div>
+                    <div class="i-row-field babel-check">
+                        <h4>BabelJS</h4>
+                        <input id="babel-check" type="checkbox">
+                    </div>
+                    <div class="i-row-field react-check">
+                        <h4>React</h4>
+                        <input id="react-check" type="checkbox">
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-button">
+                    <h3>Create</h3>
+                </button>
+            </div>
+        </form>
+
+        <div class="msg-box">
+            <h3 class="msg-txt"></h3>
+        </div>
+    </div>
+
+    <div class="electronify-page">
+        <div class="electronify-header">
+            <h1>What is <span class="electronify-header-highlight">Electronify</span>?</h1>
+        </div>
+        <h3 class="electronify-description">
+            Electronify is an application which purpose is to create Electron projects easily,
+            <br> 
+            serving as an interface between the user and the commands needed to create an Electron project.
+            <br>
+            <br>
+            Developed by <span class="electronify-header-highlight">ToxYc</span>.
+        </h3>
+        <div class="create-project-info">
+            <h1><span class="electronify-header-highlight">·</span> Create a project</h1>
+            <h3>
+                <span class="electronify-header-highlight">Electronify</span> provides an interface to create an Electron project
+                <br>
+                
+            </h3>
+        </div>
+    </div>
+
+    <div class="aboutus-page">
+
+    </div>
+
+    <script type="module" src="./build/electron_interface.js"></script>
+    <script type="module" src="./build/validations.js"></script>
+    <script type="module" src="./build/index.js"></script>
+</body>
+</html>

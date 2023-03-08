@@ -1,0 +1,16 @@
+
+            {
+                "name": "fallofthegods",
+                "description": "The game.",
+                "license": "MIT",
+                "version": "11.0.0020",
+                "author": "gycoding",
+                "gitRepository": "https://www.github.com/GY-CODING/fallofthegods",
+                "path": "awdawdadadwdd",
+                "addOns": {
+                    "typescript": false,
+                    "babel": true,
+                    "react": false
+                }
+            }
+        
