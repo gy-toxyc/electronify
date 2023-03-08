@@ -7,11 +7,11 @@ const msgText             = document.querySelector(".msg-txt");
 
 const projectSwitch       = document.querySelector(".project-el");
 const electronifySwitch   = document.querySelector(".electronify-el");
-const aboutUsSwitch       = document.querySelector(".aboutus-el");
+const aboutUsSwitch       = document.querySelector(".changelog-el");
 
 const projectPage         = document.querySelector(".setup-page");
 const electronifyPage     = document.querySelector(".electronify-page");
-const aboutUsPage         = document.querySelector(".aboutus-page");
+const aboutUsPage         = document.querySelector(".changelog-page");
 
 setupData.addEventListener("submit", (event)=> {
     event.preventDefault();
@@ -37,12 +37,15 @@ setupData.addEventListener("submit", (event)=> {
         msgText.style.color = "#19df07";
         msgText.innerHTML = "Information set successfully!";
     } catch(err) {
-        msgBox.style.display = "flex";
+        msgBox.style.animation = "appear";
+        msgBox.style.animationFillMode = "forwards";
+        msgBox.style.animationDuration = ".5s";
         msgText.style.color = "#db0000";
         msgText.innerHTML = err;
         setTimeout(()=> {
-            // msgBox.style.animation = "disappear";
-            msgBox.style.display = "none";
+            msgBox.style.animation = "disappear";
+            msgBox.style.animationFillMode = "forwards";
+            msgBox.style.animationDuration = "1s";
         }, 5000);
     }
 

@@ -17,6 +17,12 @@ const INVALID_TEST      = "Invalid test command. Only lower case characters are 
 const INVALID_GIT       = "Invalid git repository URL. It must follow the next format: '<user>/<repository>/'.";
 const INVALID_PATH      = "Invalid local path. It must follow the next format: ";
 
+/**
+ * Validates the project's name.
+ * @param {String} name Project's name.
+ * @returns {String} The unmodified name after being validated.
+ * @throws {String} Invalid name message.
+ */
 export function validateName(name) {
     const validName = /^[a-zA-Z0-9]+$/;
 
@@ -27,6 +33,13 @@ export function validateName(name) {
     }
 }
 
+/**
+ * Validates the project's description.
+ * @param {String} desc Project's description.
+ * @returns {String} The unmodified description after being validated.
+ * @returns {String} A default description (empty) if nothing is passed as an argument.
+ * @throws {String} Invalid description message.
+ */
 export function validateDesc(desc) {
     const validDesc = /^[^`]*$/;
 
@@ -40,6 +53,13 @@ export function validateDesc(desc) {
     }
 }
 
+/**
+ * Validates the project's license.
+ * @param {String} license Project's license.
+ * @returns {String} The unmodified license after being validated.
+ * @returns {String} A default licese ('ISC') if nothing is passed as an argument.
+ * @throws {String} Invalid license message.
+ */
 export function validateLicense(license) {
     const validLicense = /^[A-Z]{0,4}$/;
 
@@ -53,6 +73,13 @@ export function validateLicense(license) {
     }
 }
 
+/**
+ * Validates the project's version format.
+ * @param {String} version Project's version.
+ * @returns {String} The unmodified version after being validated.
+ * @returns {String} A default version ('1.0.0') if nothing is passed as an argument.
+ * @throws {String} Invalid version format message.
+ */
 export function validateVersion(version) {
     const validVersion = /^[0-9]{0,4}\.[0-9]{0,4}\.[0-9]{0,4}$/;
 
@@ -66,6 +93,12 @@ export function validateVersion(version) {
     }
 }
 
+/**
+ * Validates the project's author name.
+ * @param {String} author Project's author name.
+ * @returns {String} The unmodified name after being validated.
+ * @throws {String} Invalid author name message.
+ */
 export function validateAuthor(author) {
     const validAuthor = /^[a-zA-Z0-9]+$/;
 
@@ -76,6 +109,13 @@ export function validateAuthor(author) {
     }
 }
 
+/**
+ * Validates the project's test command.
+ * @param {String} test Project's test command.
+ * @returns {String} The unmodified test command after being validated.
+ * @returns {String} A default version ('test') if nothing is passed as an argument.
+ * @throws {String} Invalid test command message.
+ */
 export function validateTest(test) {
     const validTest = /^[a-z]*$/;
 
@@ -89,6 +129,12 @@ export function validateTest(test) {
     }
 }
 
+/**
+ * Validates the project's GIT repository format.
+ * @param {String} git Project's GIT repository.
+ * @returns {String} The unmodified repository after being validated.
+ * @throws {String} Invalid repository format message.
+ */
 export function validateGIT(git) {
     const validGIT = /^[a-zA-Z0-9\W*]+\/[a-zA-Z0-9\W*]+$/;
 
@@ -99,6 +145,12 @@ export function validateGIT(git) {
     }
 }
 
+/**
+ * Validates the project's local path format.
+ * @param {String} git Project's local path.
+ * @returns {String} The unmodified path after being validated.
+ * @throws {String} Invalid path format message.
+ */
 export function validatePath(path) {
     const validPath = /^[a-zA-Z0-9]+$/;      // TODO. Create the RegEx.
 

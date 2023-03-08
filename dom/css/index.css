@@ -1,3 +1,5 @@
+/* TODO. Separate CSS files, even if there's only one html for everything. */
+
 :root {
     --bg-color: #0d0d0d;
     --nav-bg-color: #161616;
@@ -74,6 +76,12 @@ input[type="checkbox"]:checked {
 ::-webkit-scrollbar {
     display: none;
 }
+
+
+
+/* ////////////////////////////////////// */
+/**            NAVIGATION BAR            **/
+/* ////////////////////////////////////// */
 
 .vertical-navbar-box {
     background-color: var(--nav-bg-color);
@@ -157,7 +165,13 @@ input[type="checkbox"]:checked {
     pointer-events: none;
 }
 
-.setup-page, .electronify-page, .aboutus-page {
+
+
+/* ////////////////////////////////////// */
+/**            GENERAL HTML              **/
+/* ////////////////////////////////////// */
+
+.setup-page, .electronify-page, .changelog-page {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -177,9 +191,15 @@ input[type="checkbox"]:checked {
     display: none;
 }
 
-.aboutus-page {
+.changelog-page {
     display: none;
 }
+
+
+
+/* ////////////////////////////////////// */
+/**              SETUP PAGE              **/
+/* ////////////////////////////////////// */
 
 .main-header {
     position: fixed;
@@ -202,6 +222,10 @@ input[type="checkbox"]:checked {
 
     padding-top: 15px;
     padding-bottom: 15px;
+
+    animation: appear;
+    animation-fill-mode: none;
+    animation-duration: 1s;
 
     z-index: 1;
 }
@@ -420,6 +444,8 @@ input[type="checkbox"]:checked {
 
     margin-right: 10px;
 
+    opacity: 0%;
+
     z-index: 7;
 }
 
@@ -433,10 +459,27 @@ input[type="checkbox"]:checked {
     text-align: right;
 }
 
+#electron-setup {
+    transform: translateX(-20px);
+
+    animation: pageAppearing;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
 
 
-/*! ////////////////////////////////////// !*/
-/*! ////////////////////////////////////// !*/
+
+/* ////////////////////////////////////// */
+/**           ELECTRONIFY PAGE           **/
+/* ////////////////////////////////////// */
+
+.electronify-page {
+    transform: translateX(-20px);
+
+    animation: pageAppearing;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
 
 .electronify-header {
     width: 100%;
@@ -466,7 +509,7 @@ input[type="checkbox"]:checked {
 }
 
 .electronify-description {
-    font-weight: bold;
+    font-weight: 200;
 	font-style: normal;
 	font-family: 'Lexend';
 	font-size: 14px;
@@ -514,7 +557,86 @@ input[type="checkbox"]:checked {
 	color: #fff;
 }
 
-.create-project-info h1 {
+.create-project-info h3 {
+    font-weight: 200;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 16px;
+	color: #fff;
+}
+
+.create-project-list, .docs-list {
+    margin-top: 40px;
+    margin-left: 45px;
+    margin-bottom: 30px;
+
+    list-style: none;
+}
+
+.create-project-list li, .docs-list li {
+    margin-top: 5px;
+}
+
+.create-project-list li h4 {
+    font-weight: 200;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 16px;
+	color: #fff;
+}
+
+.docs-list li a {
+    transition: .5s;
+}
+
+.docs-list li a:hover {
+    transition: .5s;
+    padding-left: 10px;
+    filter: brightness(170%) drop-shadow(0px 0px 10px #0e2fe959);
+}
+
+.electronify-end {
+    font-weight: 100;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 14px;
+	color: #ffffff8c;
+
+    margin-bottom: 25px;
+}
+
+/* ////////////////////////////////////// */
+/**            CHANGELOG PAGE            **/
+/* ////////////////////////////////////// */
+
+.changelog-page {
+    transform: translateX(-20px);
+
+    animation: pageAppearing;
+    animation-fill-mode: forwards;
+    animation-duration: 1s;
+}
+
+.changelog-header {
+    width: 100%;
+    height: 10%;
+
+    cursor: default;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+
+    margin-top: 15px;
+
+    z-index: 1;
+}
+
+.changelog-header h1 {
     font-weight: bold;
 	font-style: normal;
 	font-family: 'Lexend';
@@ -522,10 +644,80 @@ input[type="checkbox"]:checked {
 	color: #fff;
 }
 
+.changelog-header-highlight {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: inherit;
+    background: #ccc;
+	background: linear-gradient(7deg, var(--main-color), var(--light-color));
+	-webkit-text-fill-color: transparent;
+	-webkit-background-clip: text;
+}
+
+.ver-list {
+    margin-left: 45px;
+    margin-bottom: 30px;
+
+    align-self: start;
+
+    list-style: none;
+}
+
+.ver-list li {
+    margin-top: 5px;
+}
 
 
-/*! ////////////////////////////////////// !*/
-/*! ////////////////////////////////////// !*/
+.ver-list li h4 {
+    font-weight: 200;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 16px;
+	color: #fff;
+}
+
+.ver-list-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-items: flex-start;
+
+    width: 100%;
+    height: 700px;
+
+    margin-left: 70px;
+    margin-top: 100px;
+
+    gap: 15px;
+}
+
+.ver-list-info h1 {
+    font-weight: bold;
+	font-style: normal;
+	font-family: 'Lexend';
+	font-size: 30px;
+	color: #fff;
+}
+
+.new-ver {
+    font-weight: bold;
+	font-style: italic;
+	font-family: 'Lexend';
+	font-size: 14px;
+	color: #db0000;
+
+    margin-left: 10px;
+}
+
+
+
+/* ////////////////////////////////////// */
+/**              ANIMATIONS              **/
+/* ////////////////////////////////////// */
 
 @keyframes pageAppearing {
     from {
@@ -533,7 +725,17 @@ input[type="checkbox"]:checked {
 
     }
     to {
-        transform: translateX(20px);
+        transform: translateX(0px);
+        opacity: 100%;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0%;
+
+    }
+    to {
         opacity: 100%;
     }
 }
@@ -544,7 +746,6 @@ input[type="checkbox"]:checked {
 
     }
     to {
-        transform: translateX(20px);
         opacity: 0%;
     }
 }
