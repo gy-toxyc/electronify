@@ -1,6 +1,14 @@
 import { OS_WINDOWS, OS_MAC, OS_LINUX, ERROR_OS } from "./global_values.js";
 
 /**
+ * Opens an external URL on the default browser.
+ * @param {String} url 
+ */
+export function openURL(url) {
+    window.databridge.openURL(url);
+}
+
+/**
  * Creates a directory using NodeJS.
  * @param {String} name Relative or absolute path of the directory.
  */

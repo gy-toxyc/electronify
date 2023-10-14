@@ -1,6 +1,7 @@
 const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('databridge', {
+    openURL: (url) => ipcRenderer.invoke('open-url', url),
 	createDir: (name) => ipcRenderer.send('createDir', name),
 	createFile: (name, content) => ipcRenderer.send('createFile', name, content),
     overwriteFile: (name, content) => ipcRenderer.send('overwriteFile', name, content),

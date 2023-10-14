@@ -76,7 +76,7 @@ export const INDEX_CONTENT         = `<!DOCTYPE html>
     </style>
 </head>
 <body>
-    <h1 id="welcome">Thanks for using <span>Electronify</span></h1>
+    <h1 id="welcome">Thanks for using <span id="electronify">Electronify</span></h1>
 </body>
 </html>`;
 

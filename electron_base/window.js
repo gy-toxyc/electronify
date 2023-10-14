@@ -17,6 +17,10 @@ function createWindow(filePath, operatingSystem) {
 		titleBarOverlay: true,
 		icon: 'styles/img/electronify.ico',
 	})
+	ipcMain.handle('open-url', (event, url) => {
+		require('electron').shell.openExternal(url);
+        return "Transaction completed.";
+	})
 	ipcMain.on('execute', (event, cmd) => {
 		exec(cmd, (err, stdout, stderr) => {
 			if (err) {

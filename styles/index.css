@@ -159,6 +159,37 @@ input[type="checkbox"]:checked {
     color: rgba(0,0,0,0);
 }
 
+.social {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    height: 10%;
+    width: 80%;
+
+    gap: 20px;
+
+    list-style: none;
+}
+
+.social li a img {
+    width: 20px;
+    height: 20px;
+
+    opacity: 30%;
+    transition: .4s;
+}
+
+.social li a img:hover {
+    cursor: pointer;
+    transition: .4s;
+    opacity: 45%;
+}
+
 .toxyc-copyright {
     font-weight: 100;
 	font-style: normal;

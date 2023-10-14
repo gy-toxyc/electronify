@@ -1,4 +1,4 @@
-import { createFile, createDir, getOS } from './electron_interface.js';
+import { createFile, createDir, openURL } from './electron_interface.js';
 import { setupProject } from './project_init.js';
 import * as validations from './validations.js';
 import * as global from './global_values.js';
@@ -91,4 +91,40 @@ aboutUsSwitch.addEventListener("click", (event)=> {
     projectPage.style.display       = "none";
     electronifyPage.style.display   = "none";
     aboutUsPage.style.display       = "flex";
+});
+
+
+
+/* External URLs */
+
+document.querySelector(".x-social").addEventListener("click", () => {
+    openURL("https://twitter.com/srtoxyc")
+});
+
+document.querySelector(".instagram-social").addEventListener("click", () => {
+    openURL("https://www.instagram.com/srtoxyc/")
+});
+
+document.querySelector(".github-social").addEventListener("click", () => {
+    openURL("https://github.com/srtoxyc")
+});
+
+document.querySelector(".html-docs").addEventListener("click", () => {
+    openURL("https://developer.mozilla.org/en-US/docs/Web/HTML")
+});
+
+document.querySelector(".css-docs").addEventListener("click", () => {
+    openURL("https://developer.mozilla.org/en-US/docs/Web/CSS")
+});
+
+document.querySelector(".js-docs").addEventListener("click", () => {
+    openURL("https://developer.mozilla.org/en-US/docs/Web/JavaScript")
+});
+
+document.querySelector(".node-docs").addEventListener("click", () => {
+    openURL("https://nodejs.org/en/docs/")
+});
+
+document.querySelector(".electron-docs").addEventListener("click", () => {
+    openURL("https://www.electronjs.org/docs/latest/")
 });
