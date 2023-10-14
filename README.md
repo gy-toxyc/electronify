@@ -11,10 +11,4 @@ It's main feature is to make it easier for anyone to personalize and create an E
 
 <br>
 
-## ***Documentation***
-
-You can find all the documentation behind this project in the `docs` folder.
-
-<br>
-
 <h5 align="center" style="font-weight: 200;">Developed with &#x1F49B; by ToxYc</h5>
