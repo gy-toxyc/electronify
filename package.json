@@ -26,6 +26,8 @@
     "electron": "^23.1.2"
   },
   "dependencies": {
+    "@electron-forge/maker-dmg": "^6.4.2",
+    "@electron-forge/maker-wix": "^6.4.2",
     "electron-squirrel-startup": "^1.0.0",
     "typescript": "^4.9.5",
     "update-electron-app": "^2.0.1"
