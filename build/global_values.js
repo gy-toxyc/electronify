@@ -36,7 +36,7 @@ export const INDEX_CONTENT         = `<!DOCTYPE html>
 export const GITIGNORE_CONTENT     = `node_modules 
 /out`;
 
-export const MAIN_CONTENT      = `const { app, BrowserWindow } = require('electron')
+export const MAIN_CONTENT          = `const { app, BrowserWindow } = require('electron')
 const path = require('path')
 
 function createWindow () {
@@ -67,7 +67,7 @@ app.on('window-all-closed', () => {
   }
 })`;
 
-export const PRELOAD_CONTENT      = `const { contextBridge, ipcRenderer } = require('electron')
+export const PRELOAD_CONTENT        = `const { contextBridge, ipcRenderer } = require('electron')
 
 contextBridge.exposeInMainWorld('databridge', {
     // Here, expose NodeJS functions to the renderers in your app.

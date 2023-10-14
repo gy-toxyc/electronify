@@ -2,8 +2,6 @@
  * Electron IPC Interface.
  */
 
-
-
 /**
  * Creates a directory using NodeJS.
  * @param {String} name Relative or absolute path of the directory.
