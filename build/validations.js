@@ -63,8 +63,6 @@ export function validateDesc(desc) {
 export function validateLicense(license) {
     const validLicense = /^[A-Z]{0,4}$/;
 
-    console.log(license.length);
-
     if(license.match(validLicense) && license.length != 0) {
         return license;
     } else if(license.length === 0) {
@@ -154,7 +152,7 @@ export function validateGIT(git) {
  * @throws {String} Invalid path format message.
  */
 export function validatePath(path) {
-    const validPath = /^[A-Za-z]:\/[a-zA-Z0-9\/\-_.\s]+$/;
+    const validPath = /^[A-Za-z]:[\/\\][a-zA-Z0-9\/\\\-_.\s]+$/;
 
     if(path.match(validPath)) {
         return path;

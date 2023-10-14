@@ -1,6 +1,4 @@
-/*
- * Electron IPC Interface.
- */
+import { OS_WINDOWS, OS_MAC, OS_LINUX, ERROR_OS } from "./global_values.js";
 
 /**
  * Creates a directory using NodeJS.
@@ -42,4 +40,23 @@ export function removeFile(name) {
  */
 export function execute(command) {
     window.databridge.cmdexec(command);
+}
+
+/**
+ * Returns the name of the operating system where the program is running.
+ * @returns 
+ */
+export function getOS() {
+    return window.databridge.getOS().then(res => {
+        switch(res) {
+            case "win32":
+                return OS_WINDOWS;
+            case "darwin":
+                return OS_MAC;
+            case "linux":
+                return OS_LINUX;
+            default:
+                return null;
+        }
+    }).catch(err => console.error(ERROR_OS));
 }

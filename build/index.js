@@ -1,4 +1,4 @@
-import { createFile } from './electron_interface.js';
+import { createFile, createDir, getOS } from './electron_interface.js';
 import { setupProject } from './project_init.js';
 import * as validations from './validations.js';
 import * as global from './global_values.js';
@@ -40,6 +40,8 @@ setupData.addEventListener("submit", (event)=> {
     event.preventDefault();
 
     try {
+        createDir(`${validations.validatePath(setupData.elements['path-in'].value)}`);
+
         createFile(`${validations.validatePath(setupData.elements['path-in'].value)}/package.json`, `{
     "name": "${validations.validateName(setupData.elements['name-in'].value)}",
     "version": "${validations.validateVersion(setupData.elements['version-in'].value)}",
@@ -61,7 +63,7 @@ setupData.addEventListener("submit", (event)=> {
     "homepage": "https://www.github.com/${validations.validateGIT(setupData.elements['git-in'].value)}#readme"
 }`);
 
-        setupProject("-------", validations.validatePath(setupData.elements['path-in'].value));
+        setupProject(undefined, validations.validatePath(setupData.elements['path-in'].value));
         showMessage(global.SUCCESS_MSG, global.SUCCESS_STATE);
         
     } catch(err) {

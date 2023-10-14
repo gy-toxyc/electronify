@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photon</title>
-    <link rel="icon" type="image/png" href="./electron_base/img/electronify.png">
-    <link rel="stylesheet" href="./dom/css/index.css">
+    <title>Electronify</title>
+    <link rel="icon" href="./styles/img/electronify.ico">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
     <div class="vertical-navbar-box">
-        <img draggable="false" src="./dom/css/img/electronify-logo.png" class="app-logo">
+        <img draggable="false" src="./styles/img/electronify-logo.png" class="app-logo">
         <ul class="navbar">
             <li class="nav-element project-el">
                 <h3>Create a Project</h3>
@@ -19,7 +19,7 @@
                 <h3>What is Electronify?</h3>
             </li>
             <li class="nav-element changelog-el">
-                <h3>Changelog</h3>
+                <h3>Versions</h3>
             </li>
         </ul>
         <h5 class="toxyc-copyright">&#169; ToxYc 2023</h5>
@@ -67,7 +67,7 @@
                     <h4>Path for the project</h4>
                     <input id="path-in" type="text" required="true" placeholder="Absolute path">
                 </div>
-                <div class="column-field add-ons">
+                <!-- <div class="column-field add-ons">
                     <h4>Add-ons to your project</h4>
                     <div class="i-row-field ts-check">
                         <h4>TypeScript</h4>
@@ -81,7 +81,7 @@
                         <h4>React</h4>
                         <input id="react-check" type="checkbox">
                     </div>
-                </div>
+                </div> -->
 
                 <button type="submit" class="submit-button">
                     <h3>Create</h3>
@@ -106,11 +106,11 @@
         <div class="create-project-info">
             <h1><span class="electronify-header-highlight">·</span> Create a project</h1>
             <h3>
-                <span class="electronify-header-highlight">Electronify</span> provides an interface to create an Electron project, with the possibility of setting up some add-ons
+                <!-- <span class="electronify-header-highlight">Electronify</span> provides an interface to create an Electron project, with the possibility of setting up some add-ons
                 <br>
                 such as <b>TypeScript</b>, <b>BabelJS</b> and <b>React</b>.
                 <br>
-                <br>
+                <br> -->
                 In order to create your Electron project, you'll need to fill in these fields. Here is the explanation of each one of them:
 
                 <ul class="create-project-list">
@@ -121,7 +121,7 @@
                         <h4><span class="electronify-header-highlight">&gt;</span> <b>Project description</b> &#x2796; States the project's description. It's supposed to be brief.</h4>
                     </li>
                     <li>
-                        <h4><span class="electronify-header-highlight">&gt;</span> <b>License</b> &#x2796; If the project will be made under an specified license, it's stated into this field.</h4>
+                        <h4><span class="electronify-header-highlight">&gt;</span> <b>License</b> &#x2796; If the project will be made under a specific license, it's stated into this field.</h4>
                     </li>
                     <li>
                         <h4><span class="electronify-header-highlight">&gt;</span> <b>Version</b> &#x2796; Current version of the project when creating it.</h4>
@@ -130,22 +130,23 @@
                         <h4><span class="electronify-header-highlight">&gt;</span> <b>Author</b> &#x2796; States the project's author name. It could be a single person or a company.</h4>
                     </li>
                     <li>
-                        <h4><span class="electronify-header-highlight">&gt;</span> <b>Test command</b> &#x2796; Sets up an specified command used in the terminal when testing the project.</h4>
+                        <h4><span class="electronify-header-highlight">&gt;</span> <b>Test command</b> &#x2796; Sets up a specific command used to test the project.</h4>
                     </li>
                     <li>
-                        <h4><span class="electronify-header-highlight">&gt;</span> <b>GIT Repository</b> &#x2796; User and repository on GitHub where the project will be linked to.</h4>
+                        <h4><span class="electronify-header-highlight">&gt;</span> <b>GIT Repository</b> &#x2796; User and repository on GitHub for the project.</h4>
                     </li>
                     <li>
                         <h4><span class="electronify-header-highlight">&gt;</span> <b>Path of the project</b> &#x2796; Specific local path for the project to be stored in.</h4>
                     </li>
-                    <li>
+                    <!-- <li>
                         <h4><span class="electronify-header-highlight">&gt;</span> <b>Add-ons</b> &#x2796; A list of add-ons to use in your project.</h4>
-                    </li>
+                    </li> -->
                 </ul>
                 
                 <br>
-
-                With these fields filled, the only step to do now is to click on the <span class="electronify-header-highlight">Create</span> button,
+                Some of these fields have default values already set, in case you don't fill them up.
+                <br><br>
+                With these fields filled, the only step left is to click on the <span class="electronify-header-highlight">Create</span> button,
                 <br>
                 and your Electron project will be on its way to be created.
             </h3>
@@ -153,12 +154,12 @@
         <div class="create-project-info">
             <h1><span class="electronify-header-highlight">·</span> Useful documentation</h1>
             <h3>
-                Electron projects does need knowledge in <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b>, but to go deeper in the development
+                Electron projects do need knowledge in <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b>, but to go deeper in the development
                 <br>
-                of an Electron application, you must be used to <b>NodeJS</b> and the <b>Electron</b> modules themselves.
+                of an Electron application, you must be used to <b>NodeJS</b> and the <b>Electron</b> modules too.
                 <br>
                 <br>
-                Here are the official documentations of all the technologies used in an Electron project:
+                Here are the official documentations of all the technologies used in a basic Electron project:
 
                 <ul class="docs-list">
                     <li>
@@ -179,7 +180,7 @@
                 </ul>
                 
                 <br>
-
+<!-- 
                 In case your project demands some of the add-ons provided by this application, here we provide their official documentation too:
 
                 <br>
@@ -196,7 +197,7 @@
                     </li>
                 </ul>
                 
-                <br>
+                <br> -->
             </h3>
         </div>
 
@@ -205,7 +206,7 @@
 
     <div class="changelog-page">
         <div class="changelog-header">
-            <h1><span class="changelog-header-highlight">Changelog</span></h1>
+            <h1><span class="changelog-header-highlight">Versions</span></h1>
         </div>
 
         
@@ -213,13 +214,10 @@
             <h1 class="ver-header"><span class="electronify-header-highlight">·</span> Version <span class="electronify-header-highlight">1.0.0</span><span class="new-ver">new!</span></h1>
             <ul class="ver-list">
                 <li>
-                    <h4><span class="electronify-header-highlight">&gt;</span> Create Electron projects.</h4>
+                    <h4><span class="electronify-header-highlight">&gt;</span> Create basic Electron projects.</h4>
                 </li>
                 <li>
-                    <h4><span class="electronify-header-highlight">&gt;</span> State the path where the project will be saved.</h4>
-                </li>
-                <li>
-                    <h4><span class="electronify-header-highlight">&gt;</span> Set add-ons to your project (TypeScript, BabelJS and React).</h4>
+                    <h4><span class="electronify-header-highlight">&gt;</span> Availability for Windows, MacOS and Linux development.</h4>
                 </li>
             </ul>
         </div>

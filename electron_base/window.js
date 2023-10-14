@@ -1,9 +1,12 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 const { exec } = require('child_process');
 
-function createWindow(filePath) {
+
+
+function createWindow(filePath, operatingSystem) {
 	const win = new BrowserWindow({
 		width: 1280,
 		height: 800,
@@ -12,7 +15,7 @@ function createWindow(filePath) {
 			preload: path.join(__dirname, 'preload.js')
 		},
 		titleBarOverlay: true,
-		icon: './img/electronify.png',
+		icon: 'styles/img/electronify.ico',
 	})
 	ipcMain.on('execute', (event, cmd) => {
 		exec(cmd, (err, stdout, stderr) => {
@@ -60,6 +63,10 @@ function createWindow(filePath) {
 			});
 		});
 	});
+	ipcMain.handle('opSys', (event) => {
+		return os.platform();
+	})
+	
 	win.loadFile(filePath);
 	win.setMenuBarVisibility(false);
 }
@@ -70,7 +77,8 @@ app.whenReady().then(() => {
 	if (require('electron-squirrel-startup')) {
 		app.quit();
 	}
-	createWindow('index.html');
+
+	createWindow('index.html', os.platform());
 
 	app.on('activate', () => {
 		if (BrowserWindow.getAllWindows().length === 0) {
