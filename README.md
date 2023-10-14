@@ -1,8 +1,8 @@
-<img align="center" src="./docs/img/readme-logo.png">
+<img align="center" src="./styles/img/electronify-logo.png">
 
 ***
 
-![version](https://img.shields.io/badge/version-...-B38F00?style=for-the-badge)
+![version](https://img.shields.io/badge/version-1.0.0-B38F00?style=for-the-badge)
 [![version](https://img.shields.io/badge/developed-ToxYc-purple?style=for-the-badge)](https://github.com/srtoxyc)
 
 **Electronify** is a desktop application developed by **ToxYc**, created to help developers when creating an Electron project.
