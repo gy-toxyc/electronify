@@ -1,4 +1,7 @@
-/* TODO. Separate CSS files, even if there's only one html for everything. */
+@font-face {
+    font-family: 'Lexend';
+    src: url(./fonts/lexend.ttf);
+}
 
 :root {
     --bg-color: #0d0d0d;
@@ -31,7 +34,8 @@ body {
     height: 100vh;
     width: 100vw;
 
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 textarea {
@@ -73,9 +77,9 @@ input[type="checkbox"]:checked {
     border-radius: 6px;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
     display: none;
-}
+} */
 
 
 
@@ -84,8 +88,10 @@ input[type="checkbox"]:checked {
 /* ////////////////////////////////////// */
 
 .vertical-navbar-box {
-    background-color: var(--nav-bg-color);
+    /* position: fixed; */
 
+    background-color: var(--nav-bg-color);
+    
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -183,8 +189,8 @@ input[type="checkbox"]:checked {
     height: 100%;
     width: 80%;
 
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 .electronify-page {
@@ -193,6 +199,29 @@ input[type="checkbox"]:checked {
 
 .changelog-page {
     display: none;
+}
+
+*::-webkit-scrollbar {
+    width: 16px;
+    z-index: calc(auto + 1);
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    z-index: calc(auto + 1);
+}
+
+*::-webkit-scrollbar-thumb {
+    padding: 6px;
+    background-color: #ffffff2a;
+    border-radius: 10px;
+    border: 5px solid var(--bg-color);
+    z-index: calc(auto + 1);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #ffffff36;
+    z-index: calc(auto + 1);
 }
 
 
@@ -204,7 +233,7 @@ input[type="checkbox"]:checked {
 .main-header {
     position: fixed;
 
-    width: 100%;
+    width: 75%;
     height: 5%;
 
     cursor: default;
@@ -475,7 +504,6 @@ input[type="checkbox"]:checked {
 
 .electronify-page {
     transform: translateX(-20px);
-
     animation: pageAppearing;
     animation-fill-mode: forwards;
     animation-duration: 1s;

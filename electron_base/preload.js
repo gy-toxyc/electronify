@@ -7,4 +7,5 @@ contextBridge.exposeInMainWorld('databridge', {
     readFile: (name) => ipcRenderer.invoke('readFile', name),
     removeFile: (name) => ipcRenderer.invoke('removeFile', name),
     cmdexec: (cmd) => ipcRenderer.send('execute', cmd),
+    getOS: () => ipcRenderer.invoke('opSys'),
 })
