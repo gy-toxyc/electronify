@@ -1,4 +1,4 @@
-<img align="center" width="255px" height="255px" src="./styles/img/electronify-logo.png">
+# Electronify
 
 ***
 
