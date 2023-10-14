@@ -3,7 +3,7 @@
 ***
 
 ![version](https://img.shields.io/badge/version-...-B38F00?style=for-the-badge)
-[![version](https://img.shields.io/badge/developed-ToxYc-purple?style=for-the-badge)](https://github.com/GY-CODING)
+[![version](https://img.shields.io/badge/developed-ToxYc-purple?style=for-the-badge)](https://github.com/srtoxyc)
 
 **Electronify** is a desktop application developed by **ToxYc**, created to help developers when creating an Electron project.
 

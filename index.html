@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electronify</title>
-    <link rel="icon" type="image/jpg" href="./electron_base/img/electronify.png">
+    <link rel="icon" type="image/png" href="./electron_base/img/electronify.png">
     <link rel="stylesheet" href="./dom/css/index.css">
 </head>
 <body>
@@ -65,7 +65,7 @@
                 </div>
                 <div class="column-field path-in">
                     <h4>Path for the project</h4>
-                    <input id="path-in" type="text" required="true">
+                    <input id="path-in" type="text" required="true" placeholder="Absolute path">
                 </div>
                 <div class="column-field add-ons">
                     <h4>Add-ons to your project</h4>
@@ -227,6 +227,7 @@
 
     <script type="module" src="./build/electron_interface.js"></script>
     <script type="module" src="./build/validations.js"></script>
+    <script type="module" src="./build/project_init.js"></script>
     <script type="module" src="./build/index.js"></script>
 </body>
 </html>

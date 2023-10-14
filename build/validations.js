@@ -8,14 +8,14 @@ const INFO_LICENSE      = "As nothing has been written, a default value ('ISC') 
 const INFO_VERSION      = "As nothing has been written, a default value ('1.0.0') has been set as the project version.";
 const INFO_TEST         = "As nothing has been written, a default value ('test') has been set as the project test command.";
 
-const INVALID_NAME      = "Invalid project name. Special characters or blank spaces are not allowed.";
+const INVALID_NAME      = "Invalid project name. Special characters, capital letters or blank spaces are not allowed.";
 const INVALID_DESC      = "Invalid project description. Backticks are not allowed.";
 const INVALID_LICENSE   = "Invalid license. Only upper case characters are allowed, with a maximum of 4.";
 const INVALID_VERSION   = "Invalid version format. Only 'XXXX.XXXX.XXXX' is allowed.";
 const INVALID_AUTHOR    = "Invalid author name. Special characters or blank spaces are not allowed.";
 const INVALID_TEST      = "Invalid test command. Only lower case characters are allowed. It is recommended to be simple.";
 const INVALID_GIT       = "Invalid git repository URL. It must follow the next format: '<user>/<repository>/'.";
-const INVALID_PATH      = "Invalid local path. It must follow the next format: ";
+const INVALID_PATH      = "Invalid local path. It must follow the next format: 'disk:/dir/subdir...'";
 
 /**
  * Validates the project's name.
@@ -24,7 +24,7 @@ const INVALID_PATH      = "Invalid local path. It must follow the next format: "
  * @throws {String} Invalid name message.
  */
 export function validateName(name) {
-    const validName = /^[a-zA-Z0-9]+$/;
+    const validName = /^[a-z0-9]+$/;
 
     if(name.match(validName)) {
         return name;
@@ -63,7 +63,9 @@ export function validateDesc(desc) {
 export function validateLicense(license) {
     const validLicense = /^[A-Z]{0,4}$/;
 
-    if(license.match(validLicense)) {
+    console.log(license.length);
+
+    if(license.match(validLicense) && license.length != 0) {
         return license;
     } else if(license.length === 0) {
         console.info(INFO_LICENSE);
@@ -83,7 +85,7 @@ export function validateLicense(license) {
 export function validateVersion(version) {
     const validVersion = /^[0-9]{0,4}\.[0-9]{0,4}\.[0-9]{0,4}$/;
 
-    if(version.match(validVersion)) {
+    if(version.match(validVersion) && version.length != 0) {
         return version;
     } else if(version.length === 0) {
         console.info(INFO_VERSION);
@@ -119,7 +121,7 @@ export function validateAuthor(author) {
 export function validateTest(test) {
     const validTest = /^[a-z]*$/;
 
-    if(test.match(validTest)) {
+    if(test.match(validTest) && test.length != 0) {
         return test;
     } else if(test.length === 0) {
         console.info(INFO_TEST);
@@ -152,7 +154,7 @@ export function validateGIT(git) {
  * @throws {String} Invalid path format message.
  */
 export function validatePath(path) {
-    const validPath = /^[a-zA-Z0-9]+$/;      // TODO. Create the RegEx.
+    const validPath = /^[A-Za-z]:\/[a-zA-Z0-9\/\-_.\s]+$/;
 
     if(path.match(validPath)) {
         return path;
