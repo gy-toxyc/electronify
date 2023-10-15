@@ -1,6 +1,6 @@
 module.exports = {
   packagerConfig: {
-    icon: './style/img/electronify'
+    icon: './style/img/electronify.ico'
   },
   rebuildConfig: {},
   makers: [
