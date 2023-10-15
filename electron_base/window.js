@@ -6,7 +6,7 @@ const { exec } = require('child_process');
 
 
 
-function createWindow(filePath, operatingSystem) {
+function createWindow(filePath) {
 	const win = new BrowserWindow({
 		width: 1280,
 		height: 800,
@@ -15,7 +15,7 @@ function createWindow(filePath, operatingSystem) {
 			preload: path.join(__dirname, 'preload.js')
 		},
 		titleBarOverlay: true,
-		icon: 'styles/img/electronify.ico',
+		icon: './styles/img/electronify.ico',
 	})
 	ipcMain.handle('open-url', (event, url) => {
 		require('electron').shell.openExternal(url);
