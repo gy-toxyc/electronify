@@ -1,5 +1,6 @@
 {
   "name": "electronify",
+  "productName": "Electronify",
   "version": "1.0.0",
   "description": "Create your Electron projects faster than ever!",
   "main": "./electron_base/window.js",
