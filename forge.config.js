@@ -1,27 +1,30 @@
+const path = require('path');
+
 module.exports = {
   packagerConfig: {
-    icon: './style/img/electronify.ico'
+    icon: path.join(__dirname, "electron_base/icon")
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
       config: {
-        setupIcon: './styles/img/electronify.ico'
-      },
+        "name": "Electronify",
+        "setupIcon": path.join(__dirname, "electron_base/icon.ico")
+      }
     },
     {
       name: '@electron-forge/maker-deb',
         config: {
           options: {
-          icon: './styles/img/electronify.png'
+          icon: path.join(__dirname, "electron_base/icon.png")
         }
       },
     },
     {
       name: '@electron-forge/maker-dmg',
       config: {
-        icon: './styles/img/electronify.icns'
+        icon: path.join(__dirname, "electron_base/icon.icns")
       }
     },
     {

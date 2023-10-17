@@ -1,7 +1,7 @@
 {
   "name": "electronify",
   "version": "1.0.0",
-  "description": "<h1 align=\"center\"><b>Create your Electron projects faster than ever!</b></h1>",
+  "description": "Create your Electron projects faster than ever!",
   "main": "./electron_base/window.js",
   "directories": {
     "doc": "docs"

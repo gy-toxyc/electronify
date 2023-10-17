@@ -149,6 +149,8 @@ input[type="checkbox"]:checked {
     transition: .5s;
     font-weight: bold;
 
+    user-select: none;
+
     color: #fff;
 }
 
@@ -196,6 +198,8 @@ input[type="checkbox"]:checked {
 	font-family: 'Lexend';
 	font-size: 12px;
 	color: #ffffff5d;
+
+    user-select: none;
 
     margin-bottom: 10px;
 
@@ -296,6 +300,8 @@ input[type="checkbox"]:checked {
 	font-family: 'Lexend';
 	font-size: 25px;
 	color: #fff;
+
+    user-select: none;
 }
 
 .main-header-highlight {
@@ -365,6 +371,8 @@ input[type="checkbox"]:checked {
 	font-family: 'Lexend';
 	font-size: 14px;
 	color: #fff;
+
+    user-select: none;
 
     cursor: default;
 
@@ -649,6 +657,7 @@ input[type="checkbox"]:checked {
 }
 
 .docs-list li a:hover {
+    cursor: pointer;
     transition: .5s;
     padding-left: 10px;
     filter: brightness(170%) drop-shadow(0px 0px 10px #0e2fe959);

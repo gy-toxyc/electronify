@@ -15,7 +15,7 @@ function createWindow(filePath) {
 			preload: path.join(__dirname, 'preload.js')
 		},
 		titleBarOverlay: true,
-		icon: './styles/img/electronify.ico',
+		icon: path.join(__dirname, "icon.ico"),
 	})
 	ipcMain.handle('open-url', (event, url) => {
 		require('electron').shell.openExternal(url);
